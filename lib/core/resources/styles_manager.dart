@@ -2,34 +2,45 @@ import 'package:flutter/material.dart';
 import 'package:setup/core/resources/color_manager.dart';
 import 'package:setup/core/resources/font_manager.dart';
 
-
-TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) =>
+TextStyle _getTextStyle(
+  double fontSize,
+  String? fontFamily, 
+  FontWeight fontWeight,
+  Color color, {
+  double height = 1.3,
+  double letterSpacing = 0.5,
+}) =>
     TextStyle(
       fontSize: fontSize,
-      fontFamily: FontConstants.fontFamily,
+       fontFamily: fontFamily ?? FontConstants.interFontFamily,
       color: color,
       fontWeight: fontWeight,
+      height: height,
+      letterSpacing: letterSpacing,
     );
 
-TextStyle getLightStyle({double? fontSize, required Color color}) =>
-    _getTextStyle(fontSize ?? FontSize.s12, FontWeightManager.light, color);
+TextStyle getLightStyle({double? fontSize, String? fontFamily , required Color color}) =>
+    _getTextStyle(fontSize ?? FontSize.s12, fontFamily ,FontWeightManager.light, color);
 
-TextStyle getRegularStyle({double? fontSize, required Color color}) =>
-    _getTextStyle(fontSize ?? FontSize.s12, FontWeightManager.regular, color);
+TextStyle getRegularStyle({double? fontSize, String? fontFamily, required Color color}) =>
+    _getTextStyle(fontSize ?? FontSize.s12, fontFamily ,FontWeightManager.regular, color);
 
-TextStyle getMediumStyle({double? fontSize, required Color color}) =>
-    _getTextStyle(fontSize ?? FontSize.s12, FontWeightManager.medium, color);
+TextStyle getMediumStyle({double? fontSize,String? fontFamily, required Color color}) =>
+    _getTextStyle(fontSize ?? FontSize.s12,fontFamily  ,FontWeightManager.medium, color);
 
-TextStyle getSemiBoldStyle({double? fontSize, required Color color}) =>
-    _getTextStyle(fontSize ?? FontSize.s12, FontWeightManager.semiBold, color);
+TextStyle getSemiBoldStyle({double? fontSize,String? fontFamily, required Color color}) =>
+    _getTextStyle(fontSize ?? FontSize.s12, fontFamily ,FontWeightManager.semiBold, color);
 
-TextStyle getBoldStyle({double? fontSize, required Color color}) =>
-    _getTextStyle(fontSize ?? FontSize.s12, FontWeightManager.bold, color);
+TextStyle getBoldStyle({double? fontSize, String? fontFamily,required Color color}) =>
+    _getTextStyle(fontSize ?? FontSize.s12,fontFamily  ,FontWeightManager.bold, color);
+
+
 
 TextStyle getTextWithLine() => TextStyle(
-  color: ColorManager.primary,
-  fontSize: FontSize.s12,
-  fontWeight: FontWeight.w400,
-  decoration: TextDecoration.lineThrough,
-  decorationColor: ColorManager.primary,
-);
+      color: ColorManager.primary,
+      fontSize: FontSize.s12,
+      fontWeight: FontWeight.w400,
+      decoration: TextDecoration.lineThrough,
+      decorationColor: ColorManager.primary,
+    );
+

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FontConstants {
-  static const String fontFamily = 'Poppins';
+  static const String interFontFamily = 'Inter';
+  static const String denkOneFontFamily = 'Denk One';
+  static const String robotoFontFamily = 'Roboto';
 }
 
 class FontWeightManager {
@@ -14,14 +16,18 @@ class FontWeightManager {
 }
 
 class FontSize {
-  static double s0 = 0;
-  static double s10 = 10.0.sp;
-  static double s12 = 12.0.sp;
-  static double s14 = 14.0.sp;
-  static double s16 = 16.0.sp;
-  static double s17 = 17.0.sp;
-  static double s18 = 18.0.sp;
-  static double s20 = 20.0.sp;
-  static double s22 = 22.0.sp;
-  static double s24 = 24.0.sp;
+  static final double s0 = 0.0.sp;
+  static final double s2 = 2.0.sp;
+  static final double s4 = 4.0.sp;
+  static final double s6 = 6.0.sp;
+  static final double s8 = 8.0.sp;
+  static final double s10 = 10.0.sp;
+  static final double s12 = 12.0.sp;
+  static final double s14 = 14.0.sp;
+  static final double s16 = 16.0.sp;
+  static final double s17 = 17.0.sp;
+  static final double s18 = 18.0.sp;
+  static final double s20 = 20.0.sp;
+  static final double s22 = 22.0.sp;
+  static final double s24 = 24.0.sp; 
 }
